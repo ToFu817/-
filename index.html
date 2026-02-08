@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>勞務報酬單</title>
+    <title>勞報單產生器</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
@@ -182,7 +182,7 @@
     <div class="no-print max-w-4xl mx-auto py-8 px-4">
         <div class="flex items-center gap-3 mb-6">
             <div class="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center text-white text-2xl">🧾</div>
-            <h1 class="text-3xl font-black">勞務報酬單 <span class="text-sm font-normal text-yellow-700">| 領據小管家</span></h1>
+            <h1 class="text-3xl font-black">勞報單產生器<span class="text-sm font-normal text-yellow-700">| 稅務小豆腐</span></h1>
         </div>
 
         <div class="section-card">
@@ -318,15 +318,15 @@
             <h2 class="section-title">4. 附件上傳</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                    <label class="input-label text-xs">身分證正面</label>
+                    <label class="input-label text-base">身分證正面</label>
                     <input type="file" id="up_front" accept="image/*" class="text-xs">
                 </div>
                 <div>
-                    <label class="input-label text-xs">身分證反面</label>
+                    <label class="input-label text-base">身分證反面</label>
                     <input type="file" id="up_back" accept="image/*" class="text-xs">
                 </div>
                 <div>
-                    <label class="input-label text-xs">存摺封面</label>
+                    <label class="input-label text-base">存摺封面</label>
                     <input type="file" id="up_passbook" accept="image/*" class="text-xs">
                 </div>
             </div>
@@ -335,7 +335,40 @@
                     點我產生勞報單 (PDF)
                 </button>
             </div>
+            
         </div>
+        <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg shadow-sm">
+    <h3 class="text-sm font-bold text-amber-800 mb-2 flex items-center">
+        <span class="mr-1">💡</span> 貼心提醒：給付後的後續流程
+    </h3>
+    <p class="text-base text-amber-700 mb-3 leading-relaxed">
+        產出勞報單並完成給付後，如有扣繳稅額或二代健保，請記得於法定期限內列印繳款書並完成繳納：
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <a href="https://www.etax.nat.gov.tw/etwmain/etw144w/152" target="_blank" 
+           class="flex items-center p-3 bg-white border border-amber-200 rounded-md hover:bg-amber-100 transition-colors">
+            <div class="text-xl mr-3">🏛️</div>
+            <div>
+                <div class="text-base font-bold text-amber-900">各類所得扣繳稅額繳款書</div>
+                <div class="text-[14px] text-amber-600">請選156執行業務</div>
+            </div>
+        </a>
+        <a href="https://eservice.nhi.gov.tw/2nd/" target="_blank" 
+           class="flex items-center p-3 bg-white border border-amber-200 rounded-md hover:bg-amber-100 transition-colors">
+            <div class="text-xl mr-3">🏥</div>
+            <div>
+                <div class="text-base font-bold text-amber-900">二代補充保險費繳款書</div>
+                <div class="text-[14px] text-amber-600">請選65執行業務</div>
+            </div>
+        </a>
+    </div>
+    <p class="text-[14px] text-amber-500 mt-3 italic">
+        * 註：[扣繳稅額]於給付次月 10 日前繳納。
+    </p>
+    <p class="text-[14px] text-amber-500 mt-3 italic">
+        * 註：[二代健保]於給付次月月底前繳納。
+    </p>
+</div>
     </div>
 
     <div class="preview-wrapper">
@@ -527,4 +560,3 @@
     </script>
 </body>
 </html>
-
